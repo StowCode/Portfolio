@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation */
+
+.navbar {
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    position: fixed;
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+.navlogo {
+    height: 90px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    color: white;
+    margin-right: 50px;
+    margin-left: 100px;
+}
+
+.navlinks li {
+    margin-right: 60px;
+    margin-top: 45px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.navlinks li:hover {
+    color: rgb(94, 255, 134);
+}
+
+/* Body */
+
+.banner {
+    display: flex;
+    align-items: center;
+}
+
+.banner p {
+    max-width: 700px;
+    min-width: 400px;
+    margin-left: 150px;
+    margin-top: 50px;
+    font-size: 22px;
+    font-family: Arial;
+}
+
+.headshottile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    margin-left: 150px;
+    padding-top: 200px;
+    flex-wrap: wrap;
+}
+
+.headshot {
+    height: 400px;
+    width: auto;
+}
+
+.banner h3 {
+    font-size: 45px;
+    font-family: 'Nanum Gothic Coding', Helvetica;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.banner h4 {
+    font-size: 26px;
+    font-family: 'Nanum Gothic Coding', Helvetica;
+    margin-top: 10px;
+}
+
+.patternpadtest {
+    width: 100%;
+    height: 320px;
+    background-position: cover;
+    position: relative;
+    margin-top: 100px;
+    background-image: url(Resources/Images/patternpad\ \(2\).jpeg);
+}
