@@ -4,9 +4,15 @@
     box-sizing: border-box;
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(231, 244, 255);
 }
 
 /* Navigation */
+
+/* Set banner to flex-column with a media query
+so links are under the logo and centered
+
+also create a dropdown menu for mobile*/
 
 .navbar {
     background-color: rgba(0,0,0,.8);
@@ -14,7 +20,6 @@
     position: fixed;
     height: 125px;
     display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid white;
 }
 
@@ -24,22 +29,26 @@
     float: left;
     margin-top: 20px;
     margin-left: 40px;
+    background: none;
 }
 
 .navlinks {
-    list-style: none;
-    display: flex;
     color: white;
-    margin-right: 50px;
-    margin-left: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 75px;
+    list-style: none;
+    width: 100%;
+    background: none;
 }
 
 .navlinks li {
-    margin-right: 60px;
     margin-top: 45px;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
+    background: none;
+    margin-left: 15px;
 }
 
 .navlinks li:hover {
@@ -50,44 +59,40 @@
 
 .banner {
     display: flex;
-    align-items: center;
-}
-
-.banner p {
-    max-width: 700px;
-    min-width: 400px;
-    margin-left: 150px;
-    margin-top: 50px;
-    font-size: 22px;
-    font-family: Arial;
+    justify-content: space-around;
+    padding-top: 175px;
+    flex-wrap: wrap;
 }
 
 .headshottile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    float: left;
-    margin-left: 150px;
-    padding-top: 200px;
-    flex-wrap: wrap;
+    height: auto;
+    margin-left: 30px;
 }
 
 .headshot {
-    height: 400px;
-    width: auto;
+    max-width: 300px;
+    height: auto;
 }
 
 .banner h3 {
     font-size: 45px;
     font-family: 'Nanum Gothic Coding', Helvetica;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .banner h4 {
     font-size: 26px;
     font-family: 'Nanum Gothic Coding', Helvetica;
-    margin-top: 10px;
+}
+
+.banner p {
+    max-width: 700px;
+    min-width: 400px;
+    margin: 40px;
 }
 
 .patternpadtest {
