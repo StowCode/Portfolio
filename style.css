@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.codesnip {
+    font-family:'Vujahday Script';
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(104, 104, 104, 0.432);
+}
+
+/* NAVBAR */
+
+#navbar {
+    background:rgba(43, 43, 43, .95);
+    height: 100px;
+    position: sticky;
+    top: 0;
+    color: white;
+    overflow: hidden;
+    z-index: 12;
+    display: flex;
+}
+
+#navbarlogo {
+    height: 65px;
+    width: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    float: left;
+}
+
+.navlinkcontainer {
+    display: flex;
+    flex-shrink: 1;
+    width: 600px;
+    margin-left: 40px;
+    margin-right: 100px;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    font-family: monospace;
+}
+
+.navlink {
+    font-size: 22px;
+    display: flex;
+    margin-right: 10px;
+}
+
+#resumebutton {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    height: 22px;
+    margin-top: 35px;
+    font-family: monospace;
+    font-size: 18px;
+    border: 1px rgb(123,255,126) solid;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+    #resumebutton:hover{
+        background-color:rgba(199, 212, 212, .2);
+        cursor: grab;
+    }
+
+@media screen and (max-width: 680px) {
+    #navbar {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 100%;
+    }
+
+    #navbarlogo {
+        height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .navlinkcontainer {
+        display: none;
+    }
+
+    #resumebutton {
+        position: relative;
+        top: 0;
+        margin: 0;
+    }
+
+    /* mobile */
+
+    #hamburger {
+        display: block;
+        position: relative;
+        z-index: 5;
+        margin-right: 25px;
+        margin-top: 5px;
+    }
+    
+    .bar {
+        background-color: white;
+        height: 4px;
+        width: 30px;
+        margin-bottom: 8px;
+    }
+}
+
+/* Mobile Navbar */
+
+#mobilenavlinkcontainer {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.774);
+    right: 0;
+    list-style: none;
+    z-index: 5;
+    overflow: visible;
+}
+
+/* icon stack */
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 300px;
+    position: fixed;
+    bottom: 0;
+    margin-left: 25px;
+    align-items: center;
+    margin-bottom: 35px;
+    z-index: 10;
+}
+
+.icon {
+    height: 30px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.icon:hover {
+    height: 35px;
+}
+
+.line {
+    width: 3px;
+    background-color: rgba(0, 0, 0, 0.774);
+    height: 100px;
+    margin-top: 15px;
+}
+
+#email {
+    transform: rotate(90deg);
+    font-family: monospace;
+    font-size: 16px;
+    margin-bottom: 100px;
+    color: black;
+    z-index: 5;
+}
+
+#email:hover {
+    font-size: 17px;
+}
+
+.righticons {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px;
+    margin-bottom: 57px;
+    z-index: 10;
+}
+
+@media screen and (max-width: 728px) {
+    .icons {
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .icon {
+        height: 25px;
+        width: auto;
+    }
+
+    .righticons {
+        margin-right: 10px;
+    }
+}
+
+
+/* Links */
+        a:link {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(123,255,126);
+        }
+
+        a:active {
+            text-decoration: none;
+            color: rgb(0, 131, 2)
+        }
+
+
+
+@media screen and (max-width: 728px) {
+    #navbarlogo {
+        height: 40px;
+        margin-top: 30px;
+    }
+}
+
+
+
+/* MAIN PAGES */
+
+.banner {
+    height: 100%;
+    width: 100%;
+    /* scroll-snap-type: y mandatory;
+    scroll-snap-align: start; */
+}
+
+/* HOME */
+
+#intro {
+    background-color: rgb(199, 212, 212);
+}
+
+#introtitles {
+    margin-left: 20px;
+}
+
+#introtitles h4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    animation-name: fadein;
+    animation-duration: 4s;
+}
+
+@keyframes fadein {
+    from {color:rgb(199, 212, 212)}
+    to {color: black}
+}
+
+#introtitles h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 55px;
+    padding-top: 30px;
+    animation-name: fadein;
+    animation-duration: 4s;
+}
+
+#introtitles h2 {
+    font-family: 'Vujahday Script';
+    letter-spacing: 2px;
+    font-size: 30px;
+    animation-name: fadein;
+    animation-duration: 8s;
+}
+
+#skills {
+    font-family: 'Vujahday Script';
+    letter-spacing: 2px;
+    font-size: 20px;
+    animation-name: fadein;
+    animation-duration: 8s;
+    padding-top: 0;
+    text-align: left;
+}
+
+#headshot {
+    height: 400px;
+    width: auto;
+}
+
+#aboutcontainer {
+    display: flex;
+    justify-content:space-around;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-top: 10vh;
+}
+
+@media screen and (max-width: 728px) {
+    #aboutcontainer {
+        flex-wrap: wrap-reverse;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-top: 50px;
+    }
+
+    #headshot {
+        height: 250px;
+        width: auto;
+        padding-top: 30px;
+    }
+
+    #introtitles h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    #introtitles h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #introtitles h4 {
+        font-size: 20px;
+    }
+    
+    #skills {
+        display: none;
+    }
+
+}
+
+#testimonials {
+    text-align: center;
+    margin-top: 200px;
+    display: none;
+}
+
+/* about me(bio) and resume */
+
+#aboutme {
+    background-color:rgb(199, 212, 212);
+    height: 100%;
+    padding: 0;
+}
+
+#biocontainer {
+    display: flex;
+    padding: 100px;
+    height: 100%;
+    align-items: center;
+}
+
+#aboutme img {
+    display: block;
+    height: 200px;
+    width: auto;
+}
+
+.bio {
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 100;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    #aboutme img {
+        display: none;
+    }
+
+    .bio {
+        width: 100%;
+        padding-top: 0;
+        font-size: 14px;
+        width: 100%;
+        text-align: left;
+    }
+
+    #biocontainer {
+        padding-left: 70px;
+        padding-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/* WORK */
+
+#work {
+    background-color:rgb(199, 212, 212);
+    height: 100%;
+}
+
+#work h3 {
+    font-family: 'Vujahday Script';
+    font-size: 70px;
+    text-align: center;
+}
+
+#tilecontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.tile {
+    width: 300px;
+    height: 375px;
+    background-color: rgba(255,255,255,0.3);
+    margin: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+
+.tile:hover {
+    background-color: rgba(255,255,255,0.6);
+}
+
+
+@media screen and (max-width: 768px) {
+    #work h3 {
+        font-size: 40px;
+    }
+
+    #tilecontainer {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    #tile {
+        height: 300px;
+    }
+}
+
+.label {
+    font-family:'Vujahday Script';
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+}
+
+/* WORK 2 - LARGE PROJECTS */
+
+#largeprojects {
+    background-color:rgb(199, 212, 212);
+    height: 100%;
+    padding-top: 75px;
+}
+
+#largeprojects h3 {
+    font-family: 'Vujahday Script';
+    font-size: 70px;
+    text-align: right;
+    padding-right: 100px;
+}
+
+#clicktoexplore {
+    font-family: monospace;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 100px;
+}
+
+.projectcontainer {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 25px;
+    align-items: center;
+    background-color: rgba(0,0,0,.2);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.screenshot {
+    height: auto;
+    width: 35vw;
+    margin-right: 20px;
+}
+
+    .screenshot:hover {
+        box-shadow: 0px 0px 50px rgb(123,255,126);
+    }
+
+.projectinfo {
+    font-family: monospace;
+    font-size: 18px;
+    margin: 0;
+}
+
+.projectinfo h4 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 1000px) {
+    #largeprojects {
+        background-color:rgb(199, 212, 212);
+        height: 100%;
+        padding-top: 75px;
+    }
+    
+    #largeprojects h3 {
+        font-size: 10vw;
+        text-align: left;
+        padding-left: 60px;
+    }
+
+    #clicktoexplore {
+        font-family: monospace;
+        font-size: 14px;
+        text-align: left;
+        margin-left: 70px;
+    }
+    
+    .projectcontainer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 25px;
+        align-items: center;
+        background-color: rgba(0,0,0,.2);
+        padding: 30px;
+        border-radius: 8px;
+    }
+    
+    .screenshot {
+        height: auto;
+        margin: auto;
+        width: 50vw;
+        padding-bottom: 15px;
+    }
+    
+        #screenshot:hover {
+            box-shadow: 0px 0px 50px rgb(123,255,126);
+        }
+    
+    #wtfinfo {
+        margin: 0;
+    }
+    
+    .projectinfo {
+        font-size: 16px;
+    }
+    
+    .projectinfo h4 {
+        font-size: 24px;
+    }
+}
+
+
+/* CONTACT */
+
+#getintouch {
+    background-color:rgb(199, 212, 212);
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+#getintouch h3 {
+    font-family: 'Vujahday Script';
+    font-size: 70px;
+    text-align: left;
+    margin-left: 85px;
+    padding-top: 75px;
+}
+
+#map {
+    width: 60vw;
+    height: auto;
+    float: right;
+    margin-right: 75px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+#emailbutton {
+    padding: 3px;
+    width: 100px;
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 18px;
+    background: none;
+    border: 2px rgb(123,255,126) solid;
+    border-radius: 3px;
+    color: black;
+}
+
+#emailbutton:hover {
+    background-color: rgba(123, 255, 125, 0.4);
+    cursor: pointer;
+}
+
+ #formcontainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/*
+.forminput {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(255,255,255,0.6);
+}
+
+.forminput:focus {
+    border: 2px rgb(123,255,126) solid;
+    outline: none;
+}
+
+#formmessage {
+    padding-bottom: 125px;
+}
+
+#submit {
+    padding: 10px;
+    width: 100px;
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 18px;
+    background: none;
+    border: 2px rgb(123,255,126) solid;
+    border-radius: 3px;
+}
+
+    #submit:hover {
+        background-color: rgba(123, 255, 125, 0.4);
+        cursor: pointer;
+    }
+    */
+
+#contactme {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 75px;
+    margin-top:  50px;
+    font-family: monospace;
+    font-size: 22px;
+    width: 70%;
+    line-height: 25px;
+    align-items: center;
+}
+
+@media screen and (max-width: 862px) {
+
+    #map {
+        width: 60vw;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    #contactme {
+        margin: 0;
+        padding: 0;
+        width: 65%;
+        margin-bottom: 20px;
+    }
+
+    #getintouch h3 {
+        font-family: 'Vujahday Script';
+        font-size: 45px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    #contactme h4 {
+        font-size: 18px;
+    }
+}
+
+
+/* FOOTER */ 
+
+#footer {
+    background: rgba(43,43,43,.8);
+    height: 40px;
+    position: sticky;
+    bottom: 0;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+footer h4 {
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 728px) {
+    #footer {
+        position: relative;
+    }
+}
+
+
+
+
