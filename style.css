@@ -102,6 +102,7 @@
         z-index: 5;
         margin-right: 25px;
         margin-top: 5px;
+        cursor: pointer;
     }
     
     .bar {
@@ -115,12 +116,21 @@
 /* Mobile Navbar */
 
 #mobilenavlinkcontainer {
-    position: absolute;
-    background-color:rgba(0, 0, 0, 0.774);
+    display: none;
+    position: fixed;
     right: 0;
+    background-color:rgba(0, 0, 0, 0.774);
     list-style: none;
-    z-index: 5;
+    z-index: 10;
     overflow: visible;
+}
+
+#mobilenavlinkcontainer li {
+    font-family: monospace;
+    font-size: 22px;
+    text-align: center;
+    padding: 20px;
+    margin: 0px 50px;
 }
 
 /* icon stack */
