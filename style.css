@@ -410,7 +410,11 @@
 #work h3 {
     font-family: 'Vujahday Script';
     font-size: 70px;
-    text-align: center;
+}
+
+#smallProjects {
+    margin-left: 100px;
+    overflow: hidden;
 }
 
 #tilecontainer {
@@ -584,7 +588,6 @@
 #getintouch h3 {
     font-family: 'Vujahday Script';
     font-size: 70px;
-    text-align: left;
     margin-left: 85px;
     padding-top: 75px;
 }
