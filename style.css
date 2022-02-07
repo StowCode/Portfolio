@@ -5,12 +5,18 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: rgb(199, 212, 212);
+}
+
 .codesnip {
     font-family:'Vujahday Script';
     font-weight: 600;
     font-size: 20px;
     color: rgba(104, 104, 104, 0.432);
 }
+
+
 
 /* NAVBAR */
 
@@ -353,6 +359,26 @@
 
 /* about me(bio) and resume */
 
+#scrolldown {
+    text-align: center;
+    font-family: monospace;
+    font-size: 14px;
+    padding-top: 75px;
+    animation: fadeLoop 1.5s 0s linear infinite;
+}
+
+@keyframes fadeLoop {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 #aboutme {
     background-color:rgb(199, 212, 212);
     height: 100%;
@@ -361,7 +387,7 @@
 
 #biocontainer {
     display: flex;
-    padding: 100px;
+    padding: 150px 100px;
     height: 100%;
     align-items: center;
 }
@@ -416,6 +442,19 @@
     margin-left: 100px;
     overflow: hidden;
 }
+
+.slideIn {
+    animation: slideIn 1s 0s linear;
+}
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(500px)
+        }
+        100% {
+            transform: translateX(0px)
+        }
+    }
 
 #tilecontainer {
     display: flex;
@@ -481,6 +520,19 @@
     padding-right: 100px;
 }
 
+.slideIn3 {
+    animation: slideIn3 1s 0s linear;
+}
+
+@keyframes slideIn3 {
+    0% {
+        transform: translateX(-300px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 #clicktoexplore {
     font-family: monospace;
     font-size: 14px;
@@ -497,6 +549,24 @@
     background-color: rgba(0,0,0,.2);
     padding: 30px;
     border-radius: 15px;
+}
+
+.slideIn2 {
+    animation: slideIn2 2s 0s linear;
+}
+
+@keyframes slideIn2 {
+    0% {
+        opacity: .5;
+        transform: translateY(125px);
+    }
+    50% {
+        opacity:.5;
+        transform: translateY(0px)
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .screenshot {
