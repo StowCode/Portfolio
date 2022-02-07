@@ -307,11 +307,12 @@ body {
 #headshot {
     height: 400px;
     width: auto;
+    margin-right: 75px;
 }
 
 #aboutcontainer {
     display: flex;
-    justify-content:space-around;
+    justify-content: center;
     margin-left: 150px;
     margin-right: 150px;
     padding-top: 10vh;
