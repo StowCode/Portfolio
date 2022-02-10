@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.codesnip {
+    font-family:'Vujahday Script';
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(104, 104, 104, 0.432);
+}
+
+
+
+/* NAVBAR */
+
+#navbar {
+    background:rgb(22, 22, 22);
+    height: 100px;
+    position: sticky;
+    top: 0;
+    color: white;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    width: 100vw;
+    box-shadow: 0px 0px 25px rgb(22,22,22);
+}
+
+#navbarlogo {
+    height: 65px;
+    width: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    float: left;
+}
+
+.navlinkcontainer {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 40px;
+    margin-right: 1vw;
+    align-items: center;
+    font-family: 'Source sans pro', sans-serif;
+}
+
+.navlink {
+    font-size: 24px;
+    display: flex;
+    margin-right: 9%;
+}
+
+#resumebutton {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    height: 22px;
+    margin-top: 35px;
+    font-family: monospace;
+    font-size: 18px;
+    border: 1px rgb(74, 255, 77) solid;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+    #resumebutton:hover{
+        background-color:rgba(199, 212, 212, .2);
+        cursor: grab;
+    }
+
+@media screen and (max-width: 680px) {
+    #navbar {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        width: 100%;
+    }
+
+    #navbarlogo {
+        height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .navlinkcontainer {
+        display: none;
+    }
+
+    #resumebutton {
+        position: relative;
+        top: 0;
+        margin: 0;
+    }
+
+    /* mobile */
+
+    #hamburger {
+        display: block;
+        position: relative;
+        z-index: 5;
+        margin-right: 25px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    
+    .bar {
+        background-color: white;
+        height: 4px;
+        width: 30px;
+        margin-bottom: 8px;
+    }
+}
+
+/* Mobile Navbar */
+
+#mobilenavlinkcontainer {
+    display: none;
+    position: fixed;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.774);
+    list-style: none;
+    z-index: 10;
+    overflow: visible;
+}
+
+#mobilenavlinkcontainer li {
+    font-family: monospace;
+    font-size: 22px;
+    text-align: center;
+    padding: 20px;
+    margin: 0px 50px;
+}
+
+/* icon stack */
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 300px;
+    position: fixed;
+    bottom: 0;
+    margin-left: 25px;
+    align-items: center;
+    margin-bottom: 35px;
+    z-index: 10;
+}
+
+.icon {
+    height: 30px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.icon:hover {
+    height: 35px;
+}
+
+.line {
+    width: 3px;
+    background-color: rgba(74, 255, 77, .5);
+    height: 100px;
+    margin-top: 15px;
+}
+
+#email {
+    transform: rotate(90deg);
+    font-family: monospace;
+    font-size: 15px;
+    margin-bottom: 110px;
+    color: rgba(74, 255, 77, .5);
+    z-index: 5;
+}
+
+#email:hover {
+    font-size: 16px;
+}
+
+.righticons {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px;
+    margin-bottom: 57px;
+    z-index: 10;
+}
+
+@media screen and (max-width: 728px) {
+    .icons {
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .icon {
+        height: 25px;
+        width: auto;
+    }
+
+    .righticons {
+        margin-right: 10px;
+    }
+}
+
+
+/* Links */
+        a:link {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(123,255,126);
+        }
+
+        a:active {
+            text-decoration: none;
+            color: rgb(0, 131, 2)
+        }
+
+
+
+@media screen and (max-width: 728px) {
+    #navbarlogo {
+        height: 40px;
+        margin-top: 30px;
+    }
+}
+
+
+/* Intro */
+
+#intro {
+    height: 100vh;
+    background-color: rgb(22,22,22);
+}
+
+#aboutcontainer {
+    padding-top: 150px;
+}
+
+#introtitles {
+    color: white;
+    font-family: 'Source sans pro', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6vw;
+    margin-bottom: 50px;
+    font-family: 'Source sans pro', sans-serif;
+}
+
+#introtitles h2 {
+    font-size: 3vw;
+    color: rgba(255,255,255,.4);
+    margin-top: 0;
+    text-transform: none;
+}
+
+#introtitles p {
+    transform: translateX(-26%);
+    font-size: 2vw;
+}
+
+#scrolldown {
+    position: absolute;
+    bottom: 60px;
+    color: rgba(255,255,255,.4);
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Source sans pro', sans-serif;
+    text-transform: uppercase;
+    animation: fadeLoop 2s 0s linear infinite;
+}
+
+@keyframes fadeLoop {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* About Me */
+
+#aboutme {
+    padding-top: 100px;
+    height: 100%;
+    background-color: rgb(129, 129, 129);
+}
+
+#aboutme h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    font-family: 'Vujahday Script', sans-serif;
+}
+
+.titlebar {
+    height: 6px;
+    width: 75px;
+    background-color: rgba(74, 255, 77, 0.808);
+    border-radius: 4px;
+    margin: 10px auto;
+}
+
+#biocontainer {
+    width: 75%;
+    margin: 50px auto;
+    height: 100%;
+}
+
+#bio {
+    width: 100%;
+    font-family: 'Source sans pro', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+h2 {
+    font-family:'Source sans pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+#skills {
+    display: flex;
+}
+
+.skillbutton {
+    background-color: rgba(0,0,0,.6);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-family: Arial;
+    font-size: 16px;
+    color: white;
+    font-family: arial;
+    text-align: center;
+}
+
+/* Large Projects */
+
+#largeprojectheader {
+    color: white;
+    font-size: 50px;
+    font-family: 'Vujahday Script', sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#largeprojects {
+    background-color: rgb(22, 22, 22);
+    height: 100%;
+}
+
+.projectcontainer {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    align-items: center;
+}
+
+#weather {
+    flex-direction: row-reverse;
+    text-align: right;
+    align-items: right;
+}
+
+.projectinfo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Source sans pro', sans-serif;
+    margin-left: 30px;
+    justify-content: space-around;
+}
+
+.projectmockup_img {
+    height: 25vw;
+    min-height: 250px;
+    width: auto;
+}
+
+.projectmockup_img2 {
+    height: 30vw;
+    min-height: 300px;
+    width: auto;
+}
+
+h4 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.projectinfo p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+button {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(22,22,22,0.3);
+    font-family: 'Source sans pro', sans-serif;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid rgb(74, 255, 77);
+    width: 125px
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(74, 255, 77, 0.2);
+}
+
+/* Get in Touch */
+
+#getintouch {
+    height: 100%;
+    background-color: rgb(129,129,129);
+}
+
+#getintouch_title {
+    font-family: 'Vujahday Script', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#getintouch h4 {
+    font-family: 'Source sans pro', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#emailbutton {
+    padding: 0px 5px;
+    width: 100px;
+    background: none;
+    border: 1px rgb(74, 255, 77) solid;
+    border-radius: 3px;
+    color: black;
+}
+
+#emailbutton:hover {
+    cursor: pointer;
+    background-color: rgba(74, 255, 77, 0.2);
+}
+
+#map {
+    height: 20vw;
+}
+
+/* Form */
+
+#formcontainer {
+    width: 75%;
+    margin: 50px auto;
+    background-color: rgba(0,0,0,.2);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Source sans pro', sans-serif;
+    box-shadow: 0px 0px 20px rgb(22,22,22);
+}
+
+#contactme {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 22px;
+    color: white;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255,255,255,.2);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+input:focus {
+    outline:1px solid rgb(74, 255, 77);
+    border-radius: 5px;
+}
+
+#formmessage {
+    padding-bottom: 100px;
+}
+
+#submit {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Footer */
+
+#footer {
+    background: rgba(43,43,43,.8);
+    height: 40px;
+    position: sticky;
+    bottom: 0;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+
+footer h4 {
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 728px) {
+    #footer {
+        position: relative;
+    }
+}

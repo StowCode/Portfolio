@@ -400,6 +400,7 @@ body {
 }
 
 .bio {
+    opacity: 0;
     font-family: monospace;
     font-size: 20px;
     font-weight: 100;
@@ -522,15 +523,19 @@ body {
 }
 
 .slideIn3 {
-    animation: slideIn3 1s 0s linear;
+    animation: slideIn3;
+    animation-duration: 2s;
+    opacity: 1;
 }
 
 @keyframes slideIn3 {
     0% {
         transform: translateX(-300px);
+        opacity: 0;
     }
     100% {
         transform: translateX(0px);
+        opacity: 1;
     }
 }
 

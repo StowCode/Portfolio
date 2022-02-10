@@ -17,6 +17,7 @@ function mobileLinkClick() {
 
 // Intersection Observer 1
 
+
 const smallProjects = document.getElementById('smallProjects');
 const myStoryBadge = document.getElementById('mystory');
 const getInTouch = document.getElementById('getInTouch');
@@ -76,13 +77,13 @@ function IntersectionSlideIn3(entries) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('slideIn3')
             } else {
-                entry.target.classList.remove('slideIn2')
+                entry.target.classList.remove('slideIn3')
             }
         }
     })
 }
 
-const observer3 = new IntersectionObserver(IntersectionSlideIn3);
+const observer3 = new IntersectionObserver(IntersectionSlideIn3)
 
 observer3.observe(bio);
 
