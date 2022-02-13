@@ -283,27 +283,39 @@ h1 {
     font-size: 2vw;
 }
 
-#scrolldown {
+#scrolldown_container {
     position: absolute;
-    bottom: 60px;
-    color: rgba(255,255,255,.4);
+    bottom: 7%;
+    margin: 0 49%;
     display: block;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    font-family: 'Source sans pro', sans-serif;
-    text-transform: uppercase;
-    animation: fadeLoop 2s 0s linear infinite;
+    height: 40px;
+    width: 15px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 10px;
 }
 
-@keyframes fadeLoop {
+#scrolldown {
+    margin: 25px auto;
+    color: rgba(255,255,255,.4);
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 50%;
+    animation:  jumpDown 1.5s 0s linear infinite;
+}
+
+@keyframes jumpDown {
     0% {
+        transform: translateY(-30px);
         opacity: 0;
     }
     50% {
+        transform: translateY(-15px);
         opacity: 1;
     }
     100% {
+        transform: translateY(0px);
         opacity: 0;
     }
 }
@@ -342,6 +354,28 @@ h1 {
     font-family: 'Source sans pro', sans-serif;
     font-size: 22px;
     color: white;
+}
+
+.slideUp {
+    animation: slideUp 2s 0s linear;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    25% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    75% {
+        transform: translateY(0px);
+        opacity: .2;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 h2 {
@@ -391,10 +425,16 @@ h2 {
     align-items: center;
 }
 
-#weather {
+#wtf {
     flex-direction: row-reverse;
     text-align: right;
     align-items: right;
+}
+
+#weather {
+    flex-direction: row-reverse;
+    text-align: right;
+
 }
 
 .projectinfo {
@@ -410,12 +450,14 @@ h2 {
     height: 25vw;
     min-height: 250px;
     width: auto;
+    margin-left: 100px;
 }
 
 .projectmockup_img2 {
     height: 30vw;
     min-height: 300px;
     width: auto;
+    margin-left: 50px;
 }
 
 h4 {

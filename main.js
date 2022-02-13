@@ -14,78 +14,41 @@ function mobileLinkClick() {
     document.getElementById('mobilenavlinkcontainer').style.display = 'none';
 }
 
-
 // Intersection Observer 1
 
-
-const smallProjects = document.getElementById('smallProjects');
-const myStoryBadge = document.getElementById('mystory');
-const getInTouch = document.getElementById('getInTouch');
-
-function IntersectionSlideIn(entries) {
-    entries.map((entry) =>{
-        if (entry.intersectionRatio > 0) {
-            // Call this function only once per element
-        if (entry.isIntersecting) {
-            entry.target.classList.add('slideIn')
-        } else {
-            entry.target.classList.remove('slideIn')
-        }
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0
     }
-});
-}
 
-const observer = new IntersectionObserver(IntersectionSlideIn);
+    const bio = document.getElementById("biocontainer");
+    const wtf = document.getElementById("wtf");
+    const portfolio = document.getElementById("portfolio");
+    const weather = document.getElementById("weather");
+    const todo = document.getElementById("todolist");
 
-observer.observe(smallProjects);
-observer.observe(myStoryBadge);
-observer.observe(getInTouch);
-
-
-// Intersection Observer 2
-
-const wtf = document.getElementById("wtf");
-const weather = document.getElementById("weather");
-const todo = document.getElementById("todolist");
-
-function IntersectionSlideIn2(entries) {
-    entries.map((entry) =>{
-        if (entry.intersectionRatio > 0) {
-            // Call this function only once per element
-        if (entry.isIntersecting) {
-            entry.target.classList.add('slideIn2')
-        } else {
-            entry.target.classList.remove('slideIn2')
-        }
-    }
-})
-}
-
-const observer2 = new IntersectionObserver(IntersectionSlideIn2);
-
-observer2.observe(wtf);
-observer2.observe(weather);
-observer2.observe(todo);
-
-// Intersection Observer 3
-
-const bio = document.getElementById('bio');
-
-function IntersectionSlideIn3(entries) {
-    entries.map((entry) => {
-        if (entry.intersectionRatio > 0) {
+    function IntersectionSlideUp(entries) {
+        entries.map((entry) =>{
+            if (entry.intersectionRatio > 0) {
+                // Call this function only once per element
             if (entry.isIntersecting) {
-                entry.target.classList.add('slideIn3')
+                entry.target.classList.add('slideUp')
             } else {
-                entry.target.classList.remove('slideIn3')
+                entry.target.classList.remove('slideUp')
             }
         }
-    })
+    });
 }
 
-const observer3 = new IntersectionObserver(IntersectionSlideIn3)
+const observer = new IntersectionObserver(IntersectionSlideUp,options);
 
-observer3.observe(bio);
+observer.observe(bio);
+observer.observe(wtf);
+observer.observe(portfolio);
+observer.observe(weather);
+observer.observe(todo);
+
 
 
 /* parallax effects 
