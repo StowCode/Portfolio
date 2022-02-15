@@ -195,7 +195,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    margin-right: 25px;
+    margin-right:40px;
     margin-bottom: 57px;
     z-index: 10;
 }
@@ -273,7 +273,7 @@ h1 {
 
 #introtitles h2 {
     font-size: 3vw;
-    color: rgba(255,255,255,.4);
+    color: rgba(255, 255, 255, 0.623);
     margin-top: 0;
     text-transform: none;
 }
@@ -281,6 +281,22 @@ h1 {
 #introtitles p {
     transform: translateX(-26%);
     font-size: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 35px;
+        margin: 0px 50px;
+    }
+
+    #introtitles h2 {
+        font-size: 18px;
+        margin: 25px 60px;
+    }
+
+    #introtitles p {
+        display: none;
+    }
 }
 
 #scrolldown_container {
@@ -325,7 +341,7 @@ h1 {
 #aboutme {
     padding-top: 100px;
     height: 100%;
-    background-color: rgb(129, 129, 129);
+    background-color: rgb(105, 105, 105);
 }
 
 #aboutme h1 {
@@ -345,7 +361,8 @@ h1 {
 
 #biocontainer {
     width: 75%;
-    margin: 50px auto;
+    padding-bottom: 50px;
+    margin: auto;
     height: 100%;
 }
 
@@ -354,6 +371,14 @@ h1 {
     font-family: 'Source sans pro', sans-serif;
     font-size: 22px;
     color: white;
+}
+
+@media screen and (max-width: 800px) {
+    #bio {
+        font-size: 16px;
+        margin: auto;
+        padding: 10px;
+    }
 }
 
 .slideUp {
@@ -382,11 +407,13 @@ h2 {
     font-family:'Source sans pro', sans-serif;
     text-transform: uppercase;
     font-size: 25px;
-    margin-top: 30px;
+    margin: 30px 25px 0px;
 }
 
 #skills {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0px 25px;
 }
 
 .skillbutton {
@@ -400,6 +427,13 @@ h2 {
     color: white;
     font-family: arial;
     text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .skillbutton {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
 }
 
 /* Large Projects */
@@ -448,14 +482,12 @@ h2 {
 
 .projectmockup_img {
     height: 25vw;
-    min-height: 250px;
     width: auto;
     margin-left: 100px;
 }
 
 .projectmockup_img2 {
     height: 30vw;
-    min-height: 300px;
     width: auto;
     margin-left: 50px;
 }
@@ -492,6 +524,13 @@ button:hover {
         flex-direction: column;
         text-align: center;
         align-items: center;
+        margin-top: 50px;
+    }
+
+    #wtf {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
     }
 
     #weather {
@@ -502,24 +541,27 @@ button:hover {
 
     .projectmockup_img {
         height: 40vw;
-        min-height: 250px;
+        overflow: hidden;
         width: auto;
+        margin: 0 auto;
+        transform: translateX(10px);
     }
     
     .projectmockup_img2 {
         height: 50vw;
-        min-height: 300px;
-        width: auto;
+        overflow: hidden;
+        margin: 0 auto;
         transform: translateX(10px);
     }
-
 }
+
 
 /* Get in Touch */
 
 #getintouch {
     height: 100%;
     background-color: rgb(129,129,129);
+    padding-bottom: 100px;
 }
 
 #getintouch_title {
@@ -533,6 +575,13 @@ button:hover {
     font-family: 'Source sans pro', sans-serif;
     text-align: center;
     margin: 30px 100px;
+}
+
+@media screen and (max-width: 800px) {
+    #getintouch h4 {
+        font-size: 16px;
+        margin: 30px 50px;
+    }
 }
 
 #emailbutton {
@@ -549,15 +598,11 @@ button:hover {
     background-color: rgba(74, 255, 77, 0.2);
 }
 
-#map {
-    height: 20vw;
-}
-
 /* Form */
 
 #formcontainer {
     width: 75%;
-    margin: 50px auto;
+    margin: auto;
     background-color: rgba(0,0,0,.2);
     padding: 20px;
     border-radius: 10px;
@@ -599,6 +644,22 @@ input:focus {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 800px) {
+    #formcontainer {
+        width: 60%;
+        background-color: rgba(0,0,0,0);
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    label {
+        font-size: 15px;
+    }
+    input {
+        font-size: 15px;
+    }
+}
+
 /* Footer */
 
 #footer {
@@ -606,7 +667,7 @@ input:focus {
     height: 40px;
     position: sticky;
     bottom: 0;
-    color: rgba(255,255,255,0.6);
+    color: black;
     text-align: center;
 }
 
