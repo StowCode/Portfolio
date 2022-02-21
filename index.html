@@ -20,6 +20,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 
 
@@ -35,13 +39,12 @@
     <div class=line></div>
 </div>
 
-
 <body>
     <div id=top></div>
 
 <!-- NAVBAR -->
     <header id=navbar>
-        <img alt=stowcodelogo id=navbarlogo src="Resources/Stowcode.webp">
+        <img alt=stowcodelogo id=navbarlogo src="https://ucarecdn.com/aac08051-ae26-4543-b75b-857732aaeb05/-/preview/-/quality/smart/">
         <ul class=navlinkcontainer>
             <li class=navlink><a href="#top">Home</a></li>
             <li class=navlink><a href="#aboutme">About</a></li>
@@ -49,8 +52,6 @@
             <li class=navlink><a href="#getintouch">Contact</a></li>
             <li id=resumebutton class=navlink><a href="Resources/Stowman Resume 2022 (1).pdf" download>Resume</a></li>
         </ul>
-            <!-- <a href="Resources/Stowman Resume 2022 (1).pdf" download id=resumebutton>Resume</a> -->
-
     
     <!-- mobile navbar-->
         <div id=hamburger>
@@ -120,7 +121,7 @@
             <h3 id=largeprojectheader>Experience</h3>
             <div class=titlebar></div>
             <div class=projectcontainer id=wtf>
-                <img alt="world trumpet federation mockup" class=projectmockup_img src="Resources/wtfmockup.webp">
+                <img alt="world trumpet federation mockup" class=projectmockup_img src="https://ucarecdn.com/16547670-2921-4d8d-9fed-53cc2c6f070b/-/preview/-/quality/smart/">
                 <div class=projectinfo id=wtfinfo>
                     <h4>World Trumpet Federation</h4>
                     <p>This project allowed me to create a fresh and mobile-friendly look for an educational organization.
@@ -130,17 +131,17 @@
             </div>
 
             <div class=projectcontainer id=portfolio>
-                <img alt="stowcode mockup" class=projectmockup_img2 src="Resources/stowcodemockup.webp">
+                <img alt="stowcode mockup" class=projectmockup_img2 src="https://ucarecdn.com/c6f0f727-329a-4d00-9023-241f8f8b8315/-/preview/-/quality/smart/">
                 <div class=projectinfo id=portfolioinfo>
                     <h4>StowCode Portfolio</h4>
-                    <p>The website your're currently using!  This site uses HTML, CSS, jQuery, JavaScript, PHP, and has achieved a perfect lighthouse score.
+                    <p>The website your're currently using!  This site uses HTML, CSS, JavaScript, PHP, and has achieved a perfect lighthouse score.
                     </p>
                     <div><a target="blank" href="https://stowcode.tech"><button>Live View</button></a></div>
                 </div>
             </div> 
 
             <div class=projectcontainer id=weather>
-                <img alt="weather app mockup" class=projectmockup_img2 src="Resources/weathermockup.webp">
+                <img alt="weather app mockup" class=projectmockup_img2 src="https://ucarecdn.com/362c55fc-c85e-464c-b625-9d57bf3408f3/-/preview/-/quality/smart/">
                 <div class=projectinfo id=weatherinfo>
                 <h4>Weather App</h4>
                     <p>This project integrates an API to show the forecast of your current location.
@@ -150,7 +151,7 @@
             </div>
 
             <div class=projectcontainer id=todolist>
-                <img alt="to-do mockup" class=projectmockup_img2 src="Resources/todomockup.webp">
+                <img alt="to-do mockup" class=projectmockup_img2 src="https://ucarecdn.com/9726eda8-5d64-4987-871a-3bb5d6bc0bdf/-/preview/-/quality/smart/">
                 <div class=projectinfo id=todoinfo>
                 <h4>To-Do List</h4>
                 <p>This project features a sample login page with username and password verification, which leads to a to-do list where items can be created, read, updated, and deleted.
@@ -171,13 +172,13 @@
                 <div id=formcontainer>
                     <form id="contactme" method="post" action="contact-form-handler.php">
                         <label>Name</label>
-                            <input name="name" class=forminput type=text placeholder='Enter Your Name'>
+                            <input name="name" class=forminput type=text placeholder="your name">
                         <label>Email</label>
-                            <input name="email" class=forminput type=text placeholder='Enter Your Email'>
+                            <input name="email" class=forminput type=text placeholder="your email">
                         <label>Subject</label>
-                            <input class=forminput type=text placeholder='Message Subject'>
+                            <input class=forminput type=text placeholder="message subject" >
                         <label>Message</label>
-                            <input name="message" id=formmessage class="forminput" type=text placeholder='Type your message here...' row='4'>
+                            <input name="message" id=formmessage class="forminput" type=text row='4' placeholder=message>
                         <div><button type=submit value="Send Message" class="submit" id=submit type=button label=submit>Submit</button></div>
                     </form>
                 </div>
@@ -187,6 +188,12 @@
 <!-- FOOTER -->
         <footer id=footer>
             <h4>&copy Mitchell Stowman 2022</h4>
+            <div id=lighthousebox>
+                <div id=lighthouse><p>100</p></div>
+                <div id=lighthouse><p>100</p></div>
+                <div id=lighthouse><p>100</p></div>
+                <div id=lighthouse><p>100</p></div>
+            </div>
         </footer>
 </body>
     <script src=main.js></script>

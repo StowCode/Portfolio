@@ -15,7 +15,6 @@ function mobileLinkClick() {
 }
 
 // Intersection Observer 1
-/*
     const options = {
         root: null,
         rootMargin: '0px',
