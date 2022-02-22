@@ -249,6 +249,8 @@
 #intro {
     height: 100vh;
     background-color: rgb(22,22,22);
+    position: relative;
+    overflow: hidden;
 }
 
 #aboutcontainer {
@@ -306,6 +308,54 @@ h1 {
     width: 15px;
     border: 1px solid rgba(255,255,255,.5);
     border-radius: 10px;
+}
+
+/* geo svgs */
+
+#svg_container {
+    overflow: hidden;
+}
+
+#geo1 {
+    width: 43vw;
+    height: 40vh;
+    position: absolute;
+    left: 8%;
+    margin-left: 100px;
+}
+
+#geo2 {
+    width: 43vw;
+    height: 40vh;
+    position: absolute;
+    right: 8%;
+    margin-right: 100px;
+}
+
+#geo3 {
+    display: none;
+    width: 35vw;
+    height: 10vh;
+    position: absolute;
+    left: 8%;
+}
+
+#geo4 {
+    display: none;
+    width: 35vw;
+    height: 10vh;
+    position: absolute;
+    right: 5%;
+}
+
+@media screen and (max-width: 700px) {
+    #geo1 {
+        display: none;
+    }
+
+    #geo2 {
+        display: none;
+    }
 }
 
 #scrolldown {
