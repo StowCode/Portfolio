@@ -227,13 +227,14 @@
         a:hover {
             text-decoration: none;
             color: rgb(123,255,126);
+            border-bottom: 3px solid white;
+            transition: 0.3s;
         }
 
         a:active {
             text-decoration: none;
             color: rgb(0, 131, 2)
         }
-
 
 
 @media screen and (max-width: 728px) {
@@ -265,7 +266,7 @@
 }
 
 h1 {
-    padding-top: 100px;
+    padding-top: 50px;
     font-size: 5vw;
     margin-bottom: 50px;
     font-family: 'Source sans pro', sans-serif;
@@ -321,7 +322,6 @@ h1 {
     height: 40vh;
     position: absolute;
     left: 8%;
-    margin-left: 100px;
 }
 
 #geo2 {
@@ -329,7 +329,6 @@ h1 {
     height: 40vh;
     position: absolute;
     right: 8%;
-    margin-right: 100px;
 }
 
 #geo3 {
@@ -430,7 +429,7 @@ h1 {
 }
 
 .slideUp {
-    animation: slideUp 2.5s 0s linear;
+    animation: slideUp 2s 0s linear;
 }
 
 @keyframes slideUp {
@@ -603,6 +602,67 @@ button:hover {
     }
 }
 
+/* Store */
+
+#store_container {
+    height: 450px;
+    background-color: rgb(78, 78, 78);
+    z-index: 2;
+    position: relative;
+}
+
+#slant1 {
+    height: 300px;
+    width: 100vw;
+    background-color: rgb(78, 78, 78);
+    transform: skewY(-10deg) translateY(-100px);
+    position: absolute;
+    z-index: 1;
+}
+
+#slant2 {
+    height: 300px;
+    width: 100vw;
+    background-color: rgb(78, 78, 78);
+    transform: skewY(-10deg) translateY(-200px);
+    position: absolute;
+    z-index: 1;
+}
+
+#store_container h3 {
+    font-family: 'Vujahday Script', sans-serif;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+    margin-left: 125px;
+    width: 750px;
+}
+
+#store_container p {
+    color: rgba(0,0,0,.9);
+    font-family: 'Source sans pro', sans-serif;
+    text-align: left;
+    margin-left: 150px;
+}
+
+#product_carousel {
+    padding: 50px;
+    margin: 0px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_tile {
+    height: 300px;
+    width: 275px;
+    overflow: hidden;
+    background-color: red;
+}
+
+.product_image {
+    height: 250px;
+    width: auto;
+}
 
 /* Get in Touch */
 
@@ -616,7 +676,7 @@ button:hover {
     font-family: 'Vujahday Script', sans-serif;
     font-size: 50px;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 #getintouch h4 {
