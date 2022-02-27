@@ -48,10 +48,40 @@ observer.observe(portfolio);
 observer.observe(weather);
 observer.observe(todo);
 
+/* parallax mouse move */
+
+document.addEventListener("mousemove", parallax);
+function parallax(e){
+    this.querySelectorAll('.layer').forEach(layer => {
+        const speed = layer.getAttribute('data-speed')
+
+        const x = (window.innerWidth - e.pageX*speed)/100
+        const y = (window.innerHeight - e.pageY*speed)/100
+
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+}
+
+/* parallax scroll effects */
+
+const geo1 = document.getElementById('geo1');
+const geo2 = document.getElementById('geo2');
+const geo3 = document.getElementById('geo3');
+const geo4 = document.getElementById('geo4');
+
+window.addEventListener('scroll', function(){
+    var value = window.scrollY;
+
+    geo1.style.marginLeft = value * -.5 + 'px';
+    geo3.style.marginLeft = value * -1 + 'px';
+
+    geo2.style.marginRight = value * -.5 + 'px';
+    geo4.style.marginRight = value * -1 + 'px';
 
 
-/* parallax effects 
+})
 
+/* 
 const title = document.querySelector('#introtitles');
 const bio = document.querySelector('.bio');
 const smallProjects = document.querySelector('#smallProjects');

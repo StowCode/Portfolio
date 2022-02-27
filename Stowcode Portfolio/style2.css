@@ -12,8 +12,6 @@
     color: rgba(104, 104, 104, 0.432);
 }
 
-
-
 /* NAVBAR */
 
 #navbar {
@@ -25,7 +23,6 @@
     overflow: hidden;
     z-index: 10;
     display: flex;
-    width: 100vw;
     box-shadow: 0px 0px 25px rgb(22,22,22);
 }
 
@@ -230,13 +227,14 @@
         a:hover {
             text-decoration: none;
             color: rgb(123,255,126);
+            border-bottom: 3px solid white;
+            transition: 0.3s;
         }
 
         a:active {
             text-decoration: none;
             color: rgb(0, 131, 2)
         }
-
 
 
 @media screen and (max-width: 728px) {
@@ -252,10 +250,13 @@
 #intro {
     height: 100vh;
     background-color: rgb(22,22,22);
+    position: relative;
+    overflow: hidden;
 }
 
 #aboutcontainer {
     padding-top: 50px;
+    overflow: hidden;
 }
 
 #introtitles {
@@ -265,6 +266,7 @@
 }
 
 h1 {
+    padding-top: 50px;
     font-size: 5vw;
     margin-bottom: 50px;
     font-family: 'Source sans pro', sans-serif;
@@ -307,6 +309,52 @@ h1 {
     width: 15px;
     border: 1px solid rgba(255,255,255,.5);
     border-radius: 10px;
+}
+
+/* geo svgs */
+
+#svg_container {
+    overflow: hidden;
+}
+
+#geo1 {
+    width: 43vw;
+    height: 40vh;
+    position: absolute;
+    left: 8%;
+}
+
+#geo2 {
+    width: 43vw;
+    height: 40vh;
+    position: absolute;
+    right: 8%;
+}
+
+#geo3 {
+    display: none;
+    width: 35vw;
+    height: 10vh;
+    position: absolute;
+    left: 8%;
+}
+
+#geo4 {
+    display: none;
+    width: 35vw;
+    height: 10vh;
+    position: absolute;
+    right: 5%;
+}
+
+@media screen and (max-width: 700px) {
+    #geo1 {
+        display: none;
+    }
+
+    #geo2 {
+        display: none;
+    }
 }
 
 #scrolldown {
@@ -381,7 +429,7 @@ h1 {
 }
 
 .slideUp {
-    animation: slideUp 2.5s 0s linear;
+    animation: slideUp 2s 0s linear;
 }
 
 @keyframes slideUp {
@@ -554,6 +602,67 @@ button:hover {
     }
 }
 
+/* Store */
+
+#store_container {
+    height: 450px;
+    background-color: rgb(78, 78, 78);
+    z-index: 2;
+    position: relative;
+}
+
+#slant1 {
+    height: 300px;
+    width: 100vw;
+    background-color: rgb(78, 78, 78);
+    transform: skewY(-10deg) translateY(-100px);
+    position: absolute;
+    z-index: 1;
+}
+
+#slant2 {
+    height: 300px;
+    width: 100vw;
+    background-color: rgb(78, 78, 78);
+    transform: skewY(-10deg) translateY(-200px);
+    position: absolute;
+    z-index: 1;
+}
+
+#store_container h3 {
+    font-family: 'Vujahday Script', sans-serif;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+    margin-left: 125px;
+    width: 750px;
+}
+
+#store_container p {
+    color: rgba(0,0,0,.9);
+    font-family: 'Source sans pro', sans-serif;
+    text-align: left;
+    margin-left: 150px;
+}
+
+#product_carousel {
+    padding: 50px;
+    margin: 0px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_tile {
+    height: 300px;
+    width: 275px;
+    overflow: hidden;
+    background-color: red;
+}
+
+.product_image {
+    height: 250px;
+    width: auto;
+}
 
 /* Get in Touch */
 
@@ -567,7 +676,7 @@ button:hover {
     font-family: 'Vujahday Script', sans-serif;
     font-size: 50px;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 #getintouch h4 {
@@ -668,14 +777,14 @@ input:focus {
 
 #footer {
     background: rgba(43,43,43,.9);
-    height: 40px;
+    height: 100%;
     position: sticky;
     bottom: 0;
     color: white;
     text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 
 footer h4 {
@@ -685,6 +794,7 @@ footer h4 {
 
 #lighthousebox {
     display: flex;
+    display: none; /* temporarily disabled due to lower lighthouse score */
 }
 
 #lighthouse {
@@ -705,5 +815,6 @@ footer h4 {
 @media screen and (max-width: 728px) {
     #footer {
         position: relative;
+        display: none;
     }
 }
